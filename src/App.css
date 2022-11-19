@@ -1,0 +1,263 @@
+.App {
+    min-height: 100vh;
+    min-width: 336px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*     padding: 2rem 0 1rem 0; */
+
+}
+
+.Page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main {
+    margin-top: auto;
+    padding: 2.75rem 8.5rem 2.25rem 8.5rem;
+    border-radius: 16px;
+    /* background-color: #fff; */
+    /* filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.08)); */
+    text-align: center;
+}
+
+.user-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.625rem 0;
+    border-radius: 8px;
+    background-color: #eee;
+    user-select: none;
+    cursor: grab;
+    text-align: left;
+    margin-bottom: 0.75rem;
+}
+
+.user-info-items {
+    padding-right: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.file-input {
+    width: 320px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    user-select: none;
+}
+
+#preview {
+    width: 320px;
+    display: flex;
+    align-content: flex-start;
+    flex-basis: 0;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+}
+
+.preview-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.preview-items>img {
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+}
+
+.preview-items>p {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+label {
+    color: #333;
+    user-select: none;
+    margin-top: 0.75rem;
+}
+
+.file-input:hover,
+label:hover {
+    cursor: pointer;
+}
+
+.filedesc {
+    width: 19.25rem;
+    font-size: 12px;
+    text-align: left;
+    line-height: 2;
+}
+
+.submission-status {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    outline: #ccc 1.5px solid;
+    outline-offset: 1.5px;
+    user-select: none;
+    cursor: grab;
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.id-form {
+    /* width: 240px; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.id-form h1,
+.logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 1.75rem;
+}
+
+/* 
+.logo {
+    margin: 0 auto 0 1.5rem;
+} */
+
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+}
+
+.input:last-child {
+    color: #fff;
+    background-color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.input:last-child[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.input:last-child[disabled]:hover {
+    filter: none;
+}
+
+/* .input:focus {
+    outline: none;
+    border: 1px solid #000;
+}
+ */
+
+.input:last-child:hover {
+    /* outline: 3px solid #000;
+    outline-offset: -3px;
+    color: black;
+    background-color: #fff; */
+    outline: none;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
+}
+
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    max-width: 90%;
+    text-align: center;
+
+}
+
+.label {
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #c0c0c0;
+}
+
+.link {
+    margin-top: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+a:hover {
+    color: #000;
+}
+
+.user-none-select {
+    user-select: none;
+}
+
+.none-margin {
+    margin: 0;
+}
+
+img {
+    width: 156px;
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.08));
+    transition: all 150ms ease-in-out;
+}
+
+a:focus {
+    outline: none;
+}
+
+img:hover {
+    transform: scale(1.01);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    user-select: none;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        background-color: transparent;
+        filter: none;
+        padding: 2rem 0 0 0;
+    }
+}
