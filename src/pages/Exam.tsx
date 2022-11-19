@@ -60,6 +60,9 @@ const Exam = () => {
             method: "PUT",
             url: `${BASE_URL}/${auth.googleID}_1_${files[0].name}`,
             data: files[0],
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+            }
 
         }).then((res) => {
             console.log(res)
