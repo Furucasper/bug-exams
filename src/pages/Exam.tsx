@@ -56,13 +56,15 @@ const Exam = () => {
 
         const BASE_URL = "https://nl11syvch2.execute-api.us-east-1.amazonaws.com/dev/answers"
 
+        /* fetch(`${BASE_URL}/${auth.googleID}_1_${files[0].name}`, {
+            method: "PUT",
+            body: files[0]
+        }) */
+
         axios.request({
             method: "PUT",
             url: `${BASE_URL}/${auth.googleID}_1_${files[0].name}`,
             data: files[0],
-            headers: {
-                "Host": "localhost:5173",
-            }
 
         }).then((res) => {
             console.log(res)
