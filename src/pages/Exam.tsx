@@ -60,10 +60,8 @@ const Exam = () => {
             method: "PUT",
             url: `${BASE_URL}/${auth.googleID}_1_${files[0].name}`,
             data: files[0],
-            withCredentials: true,
             headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Alloe-Credentials": "true",
+                "Host": "localhost:5173",
             }
 
         }).then((res) => {
