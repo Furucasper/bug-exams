@@ -63,6 +63,7 @@ const Exam = () => {
             withCredentials: true,
             headers: {
                 "Access-Control-Allow-Origin": "*",
+                "Access-Control-Alloe-Credentials": "true",
             }
 
         }).then((res) => {
