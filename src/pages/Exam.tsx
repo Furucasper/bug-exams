@@ -55,6 +55,7 @@ const Exam = () => {
         console.log(JSON.stringify(files))
 
         const BASE_URL = "https://nl11syvch2.execute-api.us-east-1.amazonaws.com/dev/answers"
+        const BASE_URL2 = "https://ki2d44h8l8.execute-api.us-east-1.amazonaws.com/dev/answers"
 
         /* fetch(`${BASE_URL}/${auth.googleID}_1_${files[0].name}`, {
             method: "PUT",
@@ -63,7 +64,7 @@ const Exam = () => {
 
         axios.request({
             method: "PUT",
-            url: `${BASE_URL}/${auth.googleID}_1_${files[0].name}`,
+            url: `${BASE_URL2}/${auth.googleID}_1_${files[0].name}`,
             data: files[0],
 
         }).then((res) => {
