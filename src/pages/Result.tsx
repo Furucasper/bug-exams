@@ -60,7 +60,7 @@ function Result() {
                         </div>
                         <div className='submission-status'>
                             <p>submission status</p>
-                            <h3 style={status ? { color: '#00822e'} : { color: '#820000' }}>{status}</h3>
+                            <h3 style={result ? { color: '#00822e'} : { color: '#820000' }}>{status}</h3>
                         </div>
                         
                     </div>
