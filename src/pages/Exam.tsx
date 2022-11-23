@@ -19,6 +19,8 @@ const Exam = () => {
     useEffect(() => {
         if (!auth.isAuth) {
             navigate(`/`)
+        }else{
+            
         }
     }, [])
 
@@ -40,32 +42,28 @@ const Exam = () => {
 
     const handleFileUpload = (e: any) => {
         e.preventDefault()
-        const formData = new FormData()
-
-        formData.append("GoogleID", auth.googleID)
-        formData.append("timestamp", Date.now().toString())
-
-        files.forEach((file) => {
-            formData.append("file", file)
-        })
-
-
-        console.log(formData.getAll("file"))
-        console.log("files:", files)
-        console.log(JSON.stringify(files))
-
-        const BASE_URL = "https://nl11syvch2.execute-api.us-east-1.amazonaws.com/dev/answers"
+        
+        const BASE_URL1 = "https://91pkx5li1e.execute-api.us-east-1.amazonaws.com/signup"
         const BASE_URL2 = "https://ki2d44h8l8.execute-api.us-east-1.amazonaws.com/dev/answers"
-
-        /* fetch(`${BASE_URL}/${auth.googleID}_1_${files[0].name}`, {
-            method: "PUT",
-            body: files[0]
-        }) */
+        
+        axios.post(BASE_URL1, {
+            userId: auth.googleID,
+            name: auth.name,
+            email: auth.email
+        }).then((res) => {
+            console.log(res.data)
+        }).catch((err) => {
+            console.log(err)
+        })
 
         axios.request({
             method: "PUT",
             url: `${BASE_URL2}/${auth.googleID}_1_${files[0].name}`,
             data: files[0],
+            headers: {
+                "Content-Type": files[0].type,
+                "Content-Length": files[0].size.toString()
+            }
 
         }).then((res) => {
             console.log(res)
@@ -73,7 +71,12 @@ const Exam = () => {
                 title: "Success!",
                 text: "Your answers have been submitted.",
                 icon: "success",
-                confirmButtonText: "OK"
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                allowOutsideClick: false,
+            }).then(() => {
+                navigate(`/result`)
             })
         })
             .catch((err) => {

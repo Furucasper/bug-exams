@@ -5,6 +5,7 @@ import Exam from './pages/Exam'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Notfound from './pages/Notfound'
+import Result from './pages/Result'
 
 const AuthContext = createContext({
   isAuth: false,
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<SignIn />} />
           <Route path="/exam" element={<Exam />} />
           <Route path="*" element={<Notfound />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
         <Footer />
       </AuthContext.Provider>
